@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="container-fluid grid">
+        <div class="row">
+            <div data-row="0" data-column="0" class="col-sm-4 cell" ng-click="clickCell($event)"></div>
+            <div data-row="0" data-column="1" class="col-sm-4 cell" ng-click="clickCell($event)"></div>
+            <div data-row="0" data-column="2" class="col-sm-4 cell" ng-click="clickCell($event)"></div>
+        </div>
+        <div class="row">
+            <div data-row="1" data-column="0" class="col-sm-4 cell" ng-click="clickCell($event)"></div>
+            <div data-row="1" data-column="1" class="col-sm-4 cell" ng-click="clickCell($event)"></div>
+            <div data-row="1" data-column="2" class="col-sm-4 cell" ng-click="clickCell($event)"></div>
+        </div>
+        <div class="row">
+            <div data-row="2" data-column="0" class="col-sm-4 cell" ng-click="clickCell($event)"></div>
+            <div data-row="2" data-column="1" class="col-sm-4 cell" ng-click="clickCell($event)"></div>
+            <div data-row="2" data-column="2" class="col-sm-4 cell" ng-click="clickCell($event)"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <button type="button" class="btn btn-success btn-lg col-sm-12" ng-click="startGame()" ng-hide="isGameInProgress()">
+        GO!
+    </button>
+</div>
