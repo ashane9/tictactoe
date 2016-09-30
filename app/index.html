@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <head>
-         <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    </head>
-    <body>
-        <div class="container" ng-app="TicTacToe" ng-controller="TicTacToeController">
-            <grid/>
+<html ng-app="TicTacToe">
+  <head>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.3.4/svg.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="/build/tictactoe.css"> -->
+    <!-- <script src="../bower_components/jquery/dist/jquery.min.js"></script> -->
+    <!-- <script src="../bower_components/jquery-svg/jquery.svg.min.js"></script> -->
+    <script src="/build/bundle.js"></script>
+    <!-- <script src="../app/tictactoe.js"></script>
+    <script src="../app/modules/TicTacToe.js"></script>
+    <script src="../app/directives/GridDirective.js"></script>
+    <script src="../app/services/DrawingService.js"></script>
+    <script src="../app/services/TicTacToeService.js"></script>
+    <script src="../app/controllers/TicTacToeController.js"></script> -->
+    <!-- <script src="templateCacheViews.js"></script> -->
+  </head>
+  <body ng-controller="TicTacToeController">
+    <h1 class="text-center">Tic Tac Toe</h1>
+    <div class="row">
+      <div class="container col-sm-6 col-sm-offset-3">
+        <grid></grid>
+        <div class="row">
+          <button type="button" class="btn btn-success btn-lg col-sm-12" ng-click="startGame()" ng-hide="isGameInProgress()">
+            GO!
+          </button>
         </div>
-    </body>
+      </div>
+      <div class="row col-sm-1 col-sm-offset-1">
+        <h2>Scores</h2>
+        <h4 class="col-sm-offset-1">Player 1:</h4>
+        <h5 class="col-sm-offset-3">{{player1Score()}}</h5>
+        <h4 class="col-sm-offset-1">Player 2:</h4>
+        <h5 class="col-sm-offset-3">{{player2Score()}}</h5>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,22 @@
+$darkBorder: 2px solid lightgray;
+
+body {
+    padding-top: 75px;
+}
+.container {
+  height: 100%;
+}
+
+.cell {
+    border: $darkBorder;
+}
+
+
+.grid {
+    border: $darkBorder;
+}
+
+.social-logo {
+    width: 10%;
+    height: 10%;
+}

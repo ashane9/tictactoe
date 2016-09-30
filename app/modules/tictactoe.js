@@ -1,0 +1,21 @@
+// require('../../bower_components/angular/angular.js');
+// require('../../bower_components/jquery/dist/jquery.js');
+// require('../../bower_components/jquery-svg/jquery.svg.js');
+// require('../../bower_components/angular-bootstrap/ui-bootstrap-tpls.js');
+var angular = require('angular');
+require('jquery');
+require('jquery-svg');
+require('../css/tictactoe.css');
+require('bootstrap-css');
+require('../../bower_components/angular-bootstrap/ui-bootstrap-tpls.js');
+// require('../../bower_components/jquery/dist/jquery.js');
+// require('../../bower_components/jquery-svg/jquery.svg.js');
+
+// var TicTacToeGame = require('../tictactoe.js');
+var TicTacToe = angular.module("TicTacToe", ['ui.bootstrap']);
+require('../services/TicTacToeGame');
+require('../controllers/TicTacToeController.js');
+require('../directives/GridDirective.js');
+require('../services/DrawingService.js');
+require('../services/TicTacToeService.js');
+require('../services/TicTacToeGame.js');
