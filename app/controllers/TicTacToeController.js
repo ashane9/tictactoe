@@ -10,6 +10,14 @@ angular.module("TicTacToe")
           this.boardWidth = ($('.grid').width()/3)-4;
           };
 
+        $scope.buttonDisplay = function() {
+          if (TicTacToeService.player1Score === 0 && TicTacToeService.player2Score === 0) {
+            return 'Start Game';
+          } else {
+            return 'Play Again';
+          }
+        };
+
         $scope.startGame = function() {
             console.log("Initializing a new game...");
             this.displayBoard = true;
