@@ -93,8 +93,8 @@ gulp.task('build-js', ['clean'], function() {
 });
 
 // full build (except sprites), applies cache busting to the main page css and js bundles
-// gulp.task('build', ['clean', 'bower', 'build-css', 'build-template-cache', 'jshint', 'build-js'], function() {
-gulp.task('build', ['clean', 'bower', 'build-css', 'jshint', 'build-js'], function() {
+gulp.task('build', ['clean', 'bower', 'build-css', 'build-template-cache', 'jshint', 'build-js'], function() {
+// gulp.task('build', ['clean', 'bower', 'build-css', 'jshint', 'build-js'], function() {
   return gulp.src('app/index.html')
       .pipe(cachebust.references())
       .pipe(gulp.dest('build'));

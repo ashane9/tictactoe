@@ -6,6 +6,7 @@ require('ui-boostrap');
 
 angular.module("TicTacToe", ['ui.bootstrap']);
 
+require('../../build/templateCacheViews.js');
 require('../css/tictactoe.css');
 require('../services/TicTacToeGame');
 require('../controllers/TicTacToeController.js');

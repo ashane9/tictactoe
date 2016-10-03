@@ -65,7 +65,7 @@ angular.module("TicTacToe")
         $scope.winnerPopup = function() {
             console.log('there is a winner');
             this.openedPopup = $uibModal.open({
-              templateUrl: '../app/views/winner_popup.html',
+              templateUrl: '/views/winner_popup.html',
               size: 'sm',
               scope: $scope
             });
@@ -74,7 +74,7 @@ angular.module("TicTacToe")
 
         $scope.noWinnerPopup = function(){
           this.openedPopup = $uibModal.open({
-            templateUrl: '../app/views/no_winner.html',
+            templateUrl: '/views/no_winner.html',
             size: 'sm',
             scope: $scope
           });
