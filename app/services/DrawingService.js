@@ -4,17 +4,11 @@ angular.module("TicTacToe")
 
   this.initialize = function (ticTacToeBoard) {
     console.log("Initializing DrawingService...");
-    // $('.cell').width($('row1').width()/3);
-
 
     this.ticTacToeBoard = ticTacToeBoard;
     this.grid = [];
 
-    // $('.cell').width(this.ticTacToeBoard.boardWidth);
-    // $('.cell').height($('.cell').width());
     $('.cell').height(this.ticTacToeBoard.boardWidth);
-    console.log("cell height: "+ $(".cell").height());
-    console.log("cell width: "+ $(".cell").width());
 
     for (var row = 0; row < 3; row++) {
       this.grid.push([]);
@@ -39,7 +33,7 @@ angular.module("TicTacToe")
       for (var column = 0; column < 3; column++) {
 
         var cellUIComponent = this.grid[row][column];
-        var cellInGame = this.ticTacToeBoard.getCell(String(row),String(column));
+        var cellInGame = this.ticTacToeBoard.getCell(row,column);
         var cellSVG = cellUIComponent.svg('get');
 
         if (cellSVG !== undefined){
@@ -52,7 +46,6 @@ angular.module("TicTacToe")
         }
       }
     }
-    console.log("board drawn...");
   };
 
   this.drawCross = function (cellSVG, cellUIComponent) {
@@ -62,12 +55,6 @@ angular.module("TicTacToe")
 
   this.drawCircle = function (cellSVG, cellUIComponent) {
     cellSVG.circle(cellUIComponent.width() / 2, cellUIComponent.height() / 2, cellUIComponent.width() / 2 - CELL_PADDING, {fill: 'white', stroke: 'blue', strokeWidth: 5});
-  };
-
-  this.drawWinningLine = function () {
-    var cellUIComponent = this.fullBoard;
-    var cellSVG = cellUIComponent.svg('get');
-    cellSVG.line(null, CELL_PADDING, cellUIComponent.height()/2, cellUIComponent.width() - CELL_PADDING, cellUIComponent.height()/2, {stroke: 'black', strokeWidth: 5});
   };
 
   return this;

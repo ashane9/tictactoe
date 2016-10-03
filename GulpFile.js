@@ -39,19 +39,6 @@ gulp.task('build-css', ['clean'], function() {
       // .pipe(cachebust.resources())
       .pipe(sourcemaps.write('./app/css'))
       .pipe(gulp.dest('./app/css'));
-
-  // var b = browserify({
-  //   entries: './app/modules/TicTacToe.js'
-  // });
-  //
-  // return b.bundle()
-  //     .pipe(source('bundle.css'))
-  //     .pipe(buffer())
-  //     // .pipe(cachebust.resources())
-  //     .pipe(sourcemaps.init())
-  //     .on('error', gutil.log)
-  //     .pipe(sourcemaps.write('./app/css'))
-  //     .pipe(gulp.dest('./build'));
 });
 
 // fills in the angular template cache, to prevent loading the html templates via separte http requests

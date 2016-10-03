@@ -11,11 +11,8 @@ angular.module("TicTacToe")
    };
 
    this.increaseScore = function(winner) {
-     console.log("winner is " + winner);
      if (winner === 1) {
-       console.log("player 1 score " + this.player1Score);
        this.player1Score++;
-       console.log("player 1 score now" + this.player1Score);
      } else if (winner === 2) {
        this.player2Score++;
      }

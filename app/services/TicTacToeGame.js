@@ -73,7 +73,7 @@ angular.module('TicTacToe')
                 var currentRow = 0;
 
                 while (currentRow < 3 && stillLookingForAWinner) {
-                    if (this.getCell(String(currentRow), String(currentColumn)) === this.playerCharacters[currentPlayerValidated]) {
+                    if (this.getCell(currentRow, currentColumn) === this.playerCharacters[currentPlayerValidated]) {
 
                         rowsScore[currentPlayerValidated][currentRow]++;
                         stillLookingForAWinner = stillLookingForAWinner && rowsScore[currentPlayerValidated][currentRow] < 3;
@@ -110,7 +110,7 @@ angular.module('TicTacToe')
 
 
     var cellCoordinatesToArrayIdx = function (row, column) {
-        return (row * 3) + column;
+        return (Number(row) * 3) + Number(column);
     };
 
     return TicTacToeGame;
